@@ -1,5 +1,5 @@
 #!/bin/bash
- 
+
 
  echo "prameela::hi how are you sonith?"
- echo "sonith::haiii i am fine prameela?"
+ echo "prameela::haiii i am fine prameela?"
