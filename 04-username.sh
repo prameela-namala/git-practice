@@ -3,5 +3,12 @@
 
  echo "please enter your username::"
 
- read -s USERNAME
+ read  USERNAME
  echo "USERNAME entered is : $USERNAME"
+
+
+echo "please enter your password::"
+
+read -s PASSWORD
+
+echo "password entered is : $PASSWORD"
