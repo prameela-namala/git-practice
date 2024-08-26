@@ -2,7 +2,7 @@
 
 
 NUMBER=$1
-if[ $number - gt 20 ]
+if[ $number -gt 20 ];
 
 
 {
