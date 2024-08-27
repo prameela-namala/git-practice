@@ -8,7 +8,7 @@ if [ $USERID -ne 0 ]
 then 
 echo "please run this script with root prevelages"
 fi
-dnf install git -y
+dnf install git 
 dnf list installed git
 if [ $? -ne 0 ]
 then
