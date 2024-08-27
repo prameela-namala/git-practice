@@ -20,10 +20,11 @@ VALIDATE()
 {
  if [ $1 -ne 0 ]
  then 
-   echo "$2 is ...$R failed $N "
+    echo "$2 is ...$R failed $N "
    exit 1
+  
    else
-   echo "$2 is....$G success $N "
+         echo "$2 is....$G success $N "
 fi
 
 }
@@ -39,8 +40,8 @@ if [ $? -ne 0 ]
 then
     echo "$package is not installed,going to install it.."
 
-dnf install $package -y
-VALIDATE $? "installing package"
+    dnf install $package -y
+    VALIDATE $? "installing package"
 else
   echo " $package already installed "
 fi
