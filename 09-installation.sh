@@ -9,4 +9,4 @@ then
 echo "please run this script with root prevelages"
  exit 1
 fi
-dnf install gt -y
+dnf install git -y
