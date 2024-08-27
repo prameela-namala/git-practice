@@ -24,7 +24,7 @@ VALIDATE()
    exit 1
    else
    echo "$2 is....$G success $N "
-   fi
+fi
 
 }
 
@@ -34,7 +34,7 @@ for  package in $@
 do
    dnf list installed $package
 
-   if [$? -ne 0]
+if [$? -ne 0]
    then
    echo "$package is not installed,going to install it.."
 
@@ -42,7 +42,7 @@ do
 dnf install $package -y
 VALIDATE $? "installing package"
 else
-  echo "$package already installed"
-  fi
-
+  echo " $package already installed "
+fi
+ 
   done
