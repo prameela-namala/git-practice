@@ -22,9 +22,9 @@ fi
 
 dnf list installed git
 VALIDATE $?
-dnf install git -y
+#dnf install git -y
 
 
 dnf list installed mysql
 VALIDATE $?
-dnf install mysql -y
+#dnf install mysql -y
