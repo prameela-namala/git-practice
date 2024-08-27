@@ -19,11 +19,12 @@ then
 echo "please run this script with root prevelages"
 fi
 
-# dnf install git -y
 
 dnf list installed git
 VALIDATE $?
+dnf install git -y
 
-dnf install mysql -y
+
 dnf list installed mysql
 VALIDATE $?
+dnf install mysql -y
