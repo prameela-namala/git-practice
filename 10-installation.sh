@@ -16,3 +16,4 @@ echo "git is not installed ,we are going to install"
 dnf install -y
 else
 echo  "git is already installed,nothing to do"
+fi
