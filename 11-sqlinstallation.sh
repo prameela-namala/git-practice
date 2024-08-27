@@ -1,7 +1,16 @@
 #!/bin/bash
 #!/bin/bash
 
+VALIDATE()
+{
 
+if [ $1 -ne 0 ]
+then
+echo "$2 is not installed ,we are going to install"
+else
+echo  "$2 already installed,nothing to do"
+fi
+}
 USERID=$(id -u)
 echo "userid is :$USERID"
 
@@ -13,19 +22,10 @@ fi
 dnf install git -y
 
 dnf list installed git
-if [ $? -ne 0 ]
-then
-echo "git is not installed ,we are going to install"
-else
-dnf install git -y
-echo  "git is already installed,nothing to do"
-fi
+VALIDATE $?
+"git installed"
+
 dnf install mysql -y
 dnf list installed mysql
-if [ $? -ne 0 ]
-then
-echo "mysql is not installed ,we are going to install"
-else
-dnf install mysql -y
-echo  "mysqlis already installed,nothing to do"
-fi
+VALIDATE $?
+"mysql installed"
