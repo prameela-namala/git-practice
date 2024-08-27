@@ -21,11 +21,11 @@ dnf install git -y
 echo  "git is already installed,nothing to do"
 fi
 dnf install mysql -y
-dnf list installed git
+dnf list installed mysql
 if [ $? -ne 0 ]
 then
-echo "git is not installed ,we are going to install"
+echo "mysql is not installed ,we are going to install"
 else
-dnf install git -y
-echo  "git is already installed,nothing to do"
+dnf install mysql -y
+echo  "mysqlis already installed,nothing to do"
 fi
