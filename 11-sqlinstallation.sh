@@ -20,3 +20,12 @@ else
 dnf install git -y
 echo  "git is already installed,nothing to do"
 fi
+dnf install mysql -y
+dnf list installed git
+if [ $? -ne 0 ]
+then
+echo "git is not installed ,we are going to install"
+else
+dnf install git -y
+echo  "git is already installed,nothing to do"
+fi
