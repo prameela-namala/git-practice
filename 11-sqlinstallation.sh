@@ -19,7 +19,7 @@ then
 echo "please run this script with root prevelages"
 fi
 
-dnf install git -y
+# dnf install git -y
 
 dnf list installed git
 VALIDATE $?
