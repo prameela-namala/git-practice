@@ -28,18 +28,18 @@ then
  ZIP_FILE="$DEST_DIR/app-logs-$TIMESTAMP.zip"
  find ${SOURCE_DIR} -name "*.log" -mtime +14 |zip "$ZIP_FILE" -@
 
-if [ -f $ZIP_FILE ]
-then
- echo "successfully zipped files older than $DAYS"
- while IFS= read -r
- do
- echo "deleting file:$file"
- rm -rf $file
- done <<< $FILES
- else 
-  echo "zipping the file is failed"
-  exit 1
-fi  
+   if [ -f $ZIP_FILE ]
+      then
+        echo "successfully zipped files older than $DAYS"
+        while IFS= read -r
+     do
+   echo "deleting file:$file"
+   rm -rf $file
+   done <<< $FILES
+   else 
+     echo "zipping the file is failed"
+    exit 1
+    fi  
 else
 echo "nofiles older than $DAYS"
 fi
