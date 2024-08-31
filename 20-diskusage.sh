@@ -8,4 +8,4 @@ USAGE=$(echo $line  df -hT | grep xfs |awk -F " " '{print $6F}' |cut -d "%" -f1)
     if [ $USAGE -ge $disk_threshold ]
     then 
       echo "$PARTITION is more than $THRESHOLD:current value is $USAGE"
-    done <<< $DISK_USAGE   
+done <<< $DISK_USAGE   
