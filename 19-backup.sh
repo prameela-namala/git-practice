@@ -40,3 +40,6 @@ then
   echo "zipping the file is failed"
   exit 1
 fi  
+else
+echo "nofiles older than $DAYS"
+fi
